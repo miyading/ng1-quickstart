@@ -1,0 +1,25 @@
+{
+  "name": "ng1-quickstart",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "browserify phoneApp/app.config.js phoneApp/app.module.js phoneApp/phone-list/phone-list.component.js phoneApp/phone-detail/phone-detail.component.js > phoneApp/bundle.js",
+    "buildInvoice": "browserify invoiceApp/invoice1.js > invoiceApp/bundle.js",
+    "buildInvoice2": "browserify invoiceApp2/finance2.js invoiceApp2/invoice2.js > invoiceApp2/bundle.js",
+    "buildInvoice3": "browserify invoiceApp3/finance3.js invoiceApp3/invoice3.js > invoiceApp3/bundle.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.5.8",
+    "angular-mocks": "^1.5.8",
+    "angular-route": "^1.5.8",
+    "bootstrap": "^3.3.7",
+    "mocha": "^3.1.2"
+  },
+  "devDependencies": {
+    "browserify": "^13.1.1"
+  }
+}

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Invoice3</title>
+
+  <script src="bundle.js"></script>
+</head>
+<body ng-app="invoice3" ng-controller="InvoiceController as invoice">
+<span>Invoice: </span><br/>
+
+<span>Quantity: </span>
+<input type="number" min="1" ng-model="invoice.qty" required/><br/>
+
+<span>Costs: </span>
+<input type="number" min="2" ng-model="invoice.cost" required/><br/>
+
+<select ng-model="invoice.inCurr">
+  <option ng-repeat="c in invoice.currencies">{{c}}</option>
+</select><br/>
+
+<span>Total: </span>
+<span ng-repeat="c in invoice.currencies">{{invoice.total(c) | currency: c}}</span><br/>
+
+<button ng-click="invoice.pay()">pay</button>
+</body>
+
+</html>
