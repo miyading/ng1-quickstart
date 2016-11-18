@@ -5,10 +5,12 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "karma": "./node_modules/karma/bin/karma start",
     "build": "browserify phoneApp/app.config.js phoneApp/app.module.js phoneApp/phone-list/phone-list.component.js phoneApp/phone-detail/phone-detail.component.js > phoneApp/bundle.js",
     "buildInvoice": "browserify invoiceApp/invoice1.js > invoiceApp/bundle.js",
     "buildInvoice2": "browserify invoiceApp2/finance2.js invoiceApp2/invoice2.js > invoiceApp2/bundle.js",
-    "buildInvoice3": "browserify invoiceApp3/finance3.js invoiceApp3/invoice3.js > invoiceApp3/bundle.js"
+    "buildInvoice3": "browserify invoiceApp3/finance3.js invoiceApp3/invoice3.js > invoiceApp3/bundle.js",
+    "buildController": "browserify controllers/greetingController.js > controllers/bundle.js"
   },
   "author": "",
   "license": "ISC",
@@ -20,6 +22,10 @@
     "mocha": "^3.1.2"
   },
   "devDependencies": {
-    "browserify": "^13.1.1"
+    "browserify": "^13.1.1",
+    "jasmine": "^2.5.2",
+    "karma": "^1.3.0",
+    "karma-chrome-launcher": "^2.0.0",
+    "karma-jasmine": "^1.0.2"
   }
 }
