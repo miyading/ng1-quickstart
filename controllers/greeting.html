@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Greeting</title>
+
+  <script src="bundle.js"></script>
+</head>
+<body ng-app="thisApp">
+  <div ng-controller="GreetingController">
+    {{greeting}}
+  </div>
+
+  <div ng-controller="convertMsg">
+    <input ng-model="inputMsg" />
+    <button ng-click="customizeMsg()">custom msg</button>
+    <button ng-click="convertToChill()">Chill</button>
+    <button ng-click="convertToSpicy()()">Spicy</button><br/>
+    <span ng-model="msg">The food is {{msg}} !</span>
+  </div>
+</body>
+</html>
