@@ -11,7 +11,8 @@
     "buildInvoice3": "browserify invoiceApp3/finance3.js invoiceApp3/invoice3.js > invoiceApp3/bundle.js",
     "buildController": "browserify controllers/greetingController.js > controllers/bundle.js",
     "buildService": "browserify services/notify.js > services/bundle.js",
-    "buildScope": "browserify scopes/script.js > scopes/bundle.js"
+    "buildScope": "browserify scopes/script.js > scopes/bundle.js",
+    "buildExpression": "browserify expression/script.js > expression/bundle.js"
   },
   "author": "",
   "license": "ISC",
