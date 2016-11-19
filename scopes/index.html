@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Scope</title>
+
+  <script src="bundle.js"></script>
+</head>
+<body ng-app="myApp">
+<div ng-controller="myController">
+  <span>Your name: </span>
+  <input ng-model="name"/>
+  <button ng-click="sayHello()">greet</button>
+  <p ng-model="greet">{{greet}}</p>
+</div>
+</body>
+</html>

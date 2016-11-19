@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Service</title>
+
+  <script src="bundle.js"></script>
+</head>
+<body ng-app="myApp">
+<div id="simple" ng-controller="myController">
+  <p>Let's try this simple notify service, injected into the controller...</p>
+  <input ng-init="msg='test'" ng-model="msg"/>
+  <button ng-click="callNotify(msg)">Notify</button>
+  <p>(you have to click 3 times to see an alert)</p>
+</div>
+</body>
+</html>

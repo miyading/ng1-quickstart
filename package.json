@@ -4,13 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "karma": "./node_modules/karma/bin/karma start",
+    "test": "./node_modules/karma/bin/karma start karma.conf.js",
     "build": "browserify phoneApp/app.config.js phoneApp/app.module.js phoneApp/phone-list/phone-list.component.js phoneApp/phone-detail/phone-detail.component.js > phoneApp/bundle.js",
     "buildInvoice": "browserify invoiceApp/invoice1.js > invoiceApp/bundle.js",
     "buildInvoice2": "browserify invoiceApp2/finance2.js invoiceApp2/invoice2.js > invoiceApp2/bundle.js",
     "buildInvoice3": "browserify invoiceApp3/finance3.js invoiceApp3/invoice3.js > invoiceApp3/bundle.js",
-    "buildController": "browserify controllers/greetingController.js > controllers/bundle.js"
+    "buildController": "browserify controllers/greetingController.js > controllers/bundle.js",
+    "buildService": "browserify services/notify.js > services/bundle.js",
+    "buildScope": "browserify scopes/script.js > scopes/bundle.js"
   },
   "author": "",
   "license": "ISC",
