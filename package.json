@@ -12,7 +12,10 @@
     "buildController": "browserify controllers/greetingController.js > controllers/bundle.js",
     "buildService": "browserify services/notify.js > services/bundle.js",
     "buildScope": "browserify scopes/script.js > scopes/bundle.js",
-    "buildExpression": "browserify expression/script.js > expression/bundle.js"
+    "buildExpression": "browserify expression/script.js > expression/bundle.js",
+    "buildFilterArray": "browserify filters/filterArray/script.js > filters/filterArray/bundle.js",
+    "buildFilterArray2": "browserify filters/filterArray2/script.js > filters/filterArray2/bundle.js",
+    "buildStatefulFilter": "browserify filters/statefulFilter/script.js > filters/statefulFilter/bundle.js"
   },
   "author": "",
   "license": "ISC",

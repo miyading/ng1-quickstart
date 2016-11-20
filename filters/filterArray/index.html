@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>FilterArray</title>
+
+  <script src="bundle.js"></script>
+</head>
+<body ng-app="filterArray">
+<div ng-controller="filterController as fc">
+  <span>All entries: </span>
+  <span ng-repeat="entry in fc.array">{{entry}}</span><br/>
+
+  <span>Entries that contain an "a": </span>
+  <span ng-repeat="entry in fc.filteredArray">{{entry}}</span>
+</div>
+</body>
+</html>
