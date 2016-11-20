@@ -17,7 +17,8 @@
     "buildFilterArray2": "browserify filters/filterArray2/script.js > filters/filterArray2/bundle.js",
     "buildStatefulFilter": "browserify filters/statefulFilter/script.js > filters/statefulFilter/bundle.js",
     "buildForm": "browserify forms/script.js > forms/bundle.js",
-    "buildFormValidation": "browserify forms/formValidation/script.js > forms/formValidation/bundle.js"
+    "buildFormValidation": "browserify forms/formValidation/script.js > forms/formValidation/bundle.js",
+    "buildDirective": "browserify directives/script.js > directives/bundle.js"
   },
   "author": "",
   "license": "ISC",

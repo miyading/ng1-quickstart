@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Directive</title>
+
+  <script src="bundle.js"></script>
+</head>
+<body ng-app="directive-example1">
+<div ng-controller="CustomerController">
+  <div my-customer info="haha" type="name"></div>
+  <div my-customer info="haha" type="address"></div>
+
+  <hr>
+
+  <my-customer info="mlding" type="name"></my-customer>
+  <my-customer info="mlding" type="address"></my-customer>
+</div>
+</body>
+</html>
