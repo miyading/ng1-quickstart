@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HeroList</title>
+</head>
+<body>
+<b>Heros</b><br/>
+<hero-detail ng-repeat="hero in $ctrl.list"
+             hero="hero"
+             on-delete="$ctrl.deleteHero(hero)"
+             on-update="$ctrl.updateHero(hero, prop, value)">
+</hero-detail>
+</body>
+</html>
