@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="ngViewExample">
+<head>
+  <meta charset="UTF-8">
+  <title>ngView</title>
+
+  <script src="bundle.js"></script>
+</head>
+<body>
+<div ng-controller="MainCtrl as main">
+  Choose:
+  <a href="#/Book/Moby">Moby</a> |
+  <a href="#/Book/Moby/ch/1">Moby: Ch1</a> |
+  <a href="#/Book/Gatsby">Gatsby</a> |
+  <a href="#/Book/Gatsby/ch/4?key=value">Gatsby: Ch4</a> |
+  <a href="#/Book/Scarlet">Scarlet Letter</a><br/>
+
+  <div ng-view></div>
+
+  <hr/>
+
+  <pre>$route.current.templateUrl = {{main.$route.current.templateUrl}}</pre>
+  <pre>$route.current.params = {{main.$route.current.params}}</pre>
+  <pre>$routeParams = {{main.$routeParams}}</pre>
+</div>
+</body>
+</html>

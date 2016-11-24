@@ -21,7 +21,11 @@
     "buildDirective": "browserify directives/script.js > directives/bundle.js",
     "buildComponent": "browserify components/index.js > components/bundle.js",
     "buildComponentTree": "browserify components/componentTree/index.js > components/componentTree/bundle.js",
-    "buildControllerAndDirective": "browserify controllerAndDirective/script.js > controllerAndDirective/bundle.js"
+    "buildControllerAndDirective": "browserify controllerAndDirective/script.js > controllerAndDirective/bundle.js",
+    "buildNgView": "browserify ngView/script.js > ngView/bundle.js",
+    "build@scope": "browserify directiveScope/@scope/script.js > directiveScope/@scope/bundle.js",
+    "specialScope": "browserify directiveScope/specialScope/script.js > directiveScope/specialScope/bundle.js",
+    "dataBindingScope": "browserify directiveScope/dataBindingScope/script.js > directiveScope/dataBindingScope/bundle.js"
   },
   "author": "",
   "license": "ISC",

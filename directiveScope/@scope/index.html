@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="@scopeExample">
+<head>
+  <meta charset="UTF-8">
+  <title>& Scope</title>
+
+  <script src="bundle.js"></script>
+</head>
+<body>
+<div ng-controller="myController">
+  <div>
+    父scope:
+    <div>
+      Say: {{name}} <br/> 改变父scope的name: <input type="text" value="" ng-model="name"/>
+    </div>
+
+    <hr/>
+
+    隔离scope:
+    <div isolated-directive name="{{name}}">
+    </div>
+
+    <hr/>
+
+    隔离scope()不使用{{name}}:
+    <div isolated-directive name="name">
+    </div>
+  </div>
+</div>
+</body>
+</html>
