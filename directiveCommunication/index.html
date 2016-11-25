@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="docsTabsExample">
+<head>
+  <meta charset="UTF-8">
+  <title>tabs-pane</title>
+
+  <script src="bundle.js"></script>
+</head>
+<body>
+<my-tabs>
+  <my-pane title="Hello">
+    <p>HELLO HELLO hello!</p>
+  </my-pane>
+
+  <my-pane title="World">
+    <em>world world world!</em>
+    <p><a href ng-click="i = i + 1">counter: {{i || 0}}</a></p>
+  </my-pane>
+</my-tabs>
+</body>
+</html>
