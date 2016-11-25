@@ -25,7 +25,8 @@
     "buildNgView": "browserify ngView/script.js > ngView/bundle.js",
     "build@scope": "browserify directiveScope/@scope/script.js > directiveScope/@scope/bundle.js",
     "specialScope": "browserify directiveScope/specialScope/script.js > directiveScope/specialScope/bundle.js",
-    "dataBindingScope": "browserify directiveScope/dataBindingScope/script.js > directiveScope/dataBindingScope/bundle.js"
+    "dataBindingScope": "browserify directiveScope/dataBindingScope/script.js > directiveScope/dataBindingScope/bundle.js",
+    "scopePra": "browserify directiveScope/scopePra/script.js > directiveScope/scopePra/bundle.js"
   },
   "author": "",
   "license": "ISC",

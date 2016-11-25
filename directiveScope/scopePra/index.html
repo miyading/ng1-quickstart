@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="@scopePra">
+<head>
+  <meta charset="UTF-8">
+  <title>@scopePra</title>
+
+  <script src="bundle.js"></script>
+</head>
+<body>
+<div ng-controller="myController">
+  <div>
+    父scope:
+    <div>
+     {{msg}} <br/>
+    </div>
+
+    <hr/>
+
+    隔离scope:
+    <div isolated-directive msg="{{msg}}" on-add="addItem(item)">
+    </div>
+
+    <hr/>
+
+  </div>
+</div>
+</body>
+</html>
