@@ -26,7 +26,8 @@
     "build@scope": "browserify directiveScope/@scope/script.js > directiveScope/@scope/bundle.js",
     "specialScope": "browserify directiveScope/specialScope/script.js > directiveScope/specialScope/bundle.js",
     "dataBindingScope": "browserify directiveScope/dataBindingScope/script.js > directiveScope/dataBindingScope/bundle.js",
-    "scopePra": "browserify directiveScope/scopePra/script.js > directiveScope/scopePra/bundle.js"
+    "scopePra": "browserify directiveScope/scopePra/script.js > directiveScope/scopePra/bundle.js",
+    "directiveLink": "browserify directiveLink/script.js > directiveLink/bundle.js"
   },
   "author": "",
   "license": "ISC",
