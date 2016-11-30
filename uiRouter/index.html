@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+  <meta charset="UTF-8">
+  <title>ui-router</title>
+
+  <script src="bundle.js"></script>
+  <style>.active { color: red; font-weight: bold}</style>
+</head>
+<body>
+<!--A ui-sref is a directive, add some ui-sref links. When clicked, the links will activate a state. -->
+<!--Add ui-sref-active="active" to the ui-sref links. This directive will add the active css class to the link when the target state is active. -->
+<a ui-sref="hello" ui-sref-active="active">Hello</a>
+<a ui-sref="about" ui-sref-active="active">about</a>
+
+<div ui-view></div>
+</body>
+</html>

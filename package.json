@@ -28,7 +28,9 @@
     "dataBindingScope": "browserify directiveScope/dataBindingScope/script.js > directiveScope/dataBindingScope/bundle.js",
     "scopePra": "browserify directiveScope/scopePra/script.js > directiveScope/scopePra/bundle.js",
     "directiveLink": "browserify directiveLink/script.js > directiveLink/bundle.js",
-    "directiveCommunication": "browserify directiveCommunication/script.js > directiveCommunication/bundle.js"
+    "directiveCommunication": "browserify directiveCommunication/script.js > directiveCommunication/bundle.js",
+    "buildUiRouter": "browserify uiRouter/script.js > uiRouter/bundle.js",
+    "solarSystem": "browserify uiRouter/helloSolarSystem/script.js uiRouter/helloSolarSystem/*/*.js uiRouter/helloSolarSystem/*/*.json > uiRouter/helloSolarSystem/bundle.js"
   },
   "author": "",
   "license": "ISC",
@@ -36,6 +38,7 @@
     "angular": "^1.5.8",
     "angular-mocks": "^1.5.8",
     "angular-route": "^1.5.8",
+    "angular-ui-router": "^1.0.0-beta.3",
     "bootstrap": "^3.3.7",
     "mocha": "^3.1.2"
   },
