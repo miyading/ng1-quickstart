@@ -30,7 +30,8 @@
     "directiveLink": "browserify directiveLink/script.js > directiveLink/bundle.js",
     "directiveCommunication": "browserify directiveCommunication/script.js > directiveCommunication/bundle.js",
     "buildUiRouter": "browserify uiRouter/script.js > uiRouter/bundle.js",
-    "solarSystem": "browserify uiRouter/helloSolarSystem/script.js uiRouter/helloSolarSystem/*/*.js uiRouter/helloSolarSystem/*/*.json > uiRouter/helloSolarSystem/bundle.js"
+    "solarSystem": "browserify uiRouter/helloSolarSystem/script.js uiRouter/helloSolarSystem/*/*.js uiRouter/helloSolarSystem/*/*.json > uiRouter/helloSolarSystem/bundle.js",
+    "ngInclude": "browserify ngInclude/script.js > ngInclude/bundle.js"
   },
   "author": "",
   "license": "ISC",

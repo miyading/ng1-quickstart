@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ng-include</title>
+
+  <script src="bundle.js"></script>
+</head>
+<body ng-app="myApp">
+<div ng-controller="ExampleCtrl">
+  <select ng-model="choose" ng-options="t.name for t in templates">
+    <option value="">(blank)</option>
+  </select>
+  url of the template: <code>{{choose.url}}</code>
+
+  <hr/>
+
+  <div ng-controller="ExampleCtrl">
+    <div ng-include="template.url" ng-controller="OtherCtrl"></div>
+  </div>
+</div>
+</body>
+</html>
