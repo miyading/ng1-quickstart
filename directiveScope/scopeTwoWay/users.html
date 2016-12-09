@@ -1,0 +1,8 @@
+<select ng-model="selectedUserName">
+  <option selected></option>
+  <option>test</option>
+  <option ng-repeat="user in users">
+    {{user.name}}
+  </option>
+
+</select>
