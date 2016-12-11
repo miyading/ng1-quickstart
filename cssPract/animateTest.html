@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Animate</title>
+</head>
+<script src="jquery-3.1.1.min.js"></script>
+<script>
+  $(document).ready(function() {
+//动画速度
+    var speed = 500;
+
+//绑定事件处理
+    $("#btnShow").click(function (event) {
+//取消事件冒泡
+      event.stopPropagation();
+//设置弹出层位置
+      var offset = $(event.target).offset();
+      $("#divPop").css({top: offset.top + $(event.target).height() + "px", right: $(window).width() - offset.left});
+//切换弹出层的显示状态
+      $("#divPop").toggle(speed);
+      $(document).click(function (event) {
+        $("#divPop").hide(speed);
+      });
+
+    });
+  });
+</script>
+<body>
+<button id="btnShow">click me!</button>
+</body>
+</html>
