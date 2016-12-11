@@ -17,16 +17,33 @@
       float: right;
     }
 
-    .result {
-      border: 3px solid yellow;
-    }
-
-    .test {
+    .result > .wrap {
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
       width: 200px;
       border: 1px solid green;
+      display: inline-block;
+    }
+
+    .result > .nowrap {
+      color: darkgray;
+      background: white;
+      text-align: center;
+      width: 300px;
+      border: 1px solid lightgray;
+      display: none;
+
+      /*word-break:keep-all;!* 不换行 *!*/
+      /*white-space:nowrap;!* 不换行 *!*/
+    }
+
+    .result:hover > .nowrap {
+      display: block;
+    }
+
+    .nowrap {
+
     }
   </style>
 </head>
@@ -42,11 +59,11 @@
         <li>orange</li>
       </ul>
 
-      <img src="" width="100px" height="100px" title="img title" alt="img alt" />
+      <img src="" width="100px" height="100px" title="img title" alt="img alt"/>
 
       <div class="result">
-        <span class="test">dsffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff</span>
-        <span>append</span>
+        <span class="wrap">我想,我想,我想跨越天空,飞过无数阻碍,我想,我想,我想与你一起,我要残酷的忧伤,不要痛苦的悲伤!</span>
+        <span class="nowrap">我想,我想,我想跨越天空,飞过无数阻碍,我想,我想,我想与你一起,我要残酷的忧伤,不要痛苦的悲伤!</span>
       </div>
 
     </div>
