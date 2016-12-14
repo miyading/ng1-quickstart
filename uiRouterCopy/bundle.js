@@ -40136,5 +40136,24 @@ angular.module('myApp', ['ui.router'])
     
     $stateProvider.state(helloState);
     $stateProvider.state(aboutState);
+  }])
+  // .run(function ($rootScope, $state, $stateParams) {
+  //   $rootScope.$state = $state;
+  //   $rootScope.$stateParams = $stateParams;
+  // })
+  .controller('ExampleCtrl', ['$scope', '$state', function ($scope, $state) {
+    $scope.toggle = function () {
+      $state.go('hello');
+    };
+    //
+    // function myApply(expr, locals) {
+    //   return $scope.$eval(expr, locals);
+    //
+    // }
+    
+    /*$scope.navList = [{name: 'WorkSpace', func: $state.go('hello')}, {
+      name: 'TR Check',
+      func: $state.go('about')
+    }];*/
   }]);
 },{"angular":3,"angular-ui-router":1}]},{},[4]);

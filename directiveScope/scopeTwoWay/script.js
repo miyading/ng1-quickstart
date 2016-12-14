@@ -2,7 +2,7 @@ var angular = require('angular');
 
 angular.module('myApp', [])
   .controller('myController', function ($scope) {
-    $scope.users = [
+    $scope.usersr = [
       {
         name: 'hello',
         id: 1
@@ -13,7 +13,7 @@ angular.module('myApp', [])
       }
     ];
     
-    $scope.selectedUserName = $scope.users[0].name;
+    $scope.selectedUserName = $scope.usersr[0].name;
   })
   .directive('isolatedDirective', function () {
     return {

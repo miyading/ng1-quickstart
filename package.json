@@ -30,15 +30,16 @@
     "directiveLink": "browserify directiveLink/script.js > directiveLink/bundle.js",
     "directiveCommunication": "browserify directiveCommunication/script.js > directiveCommunication/bundle.js",
     "buildUiRouter": "browserify uiRouter/script.js > uiRouter/bundle.js",
+    "buildUiRouter2": "browserify uiRouterCopy/script.js > uiRouterCopy/bundle.js",
     "solarSystem": "browserify uiRouter/helloSolarSystem/script.js uiRouter/helloSolarSystem/*/*.js uiRouter/helloSolarSystem/*/*.json > uiRouter/helloSolarSystem/bundle.js",
     "ngInclude": "browserify ngInclude/script.js > ngInclude/bundle.js",
-    "scopeTwoWay": "browserify directiveScope/scopeTwoWay/script.js > directiveScope/scopeTwoWay/bundle.js"
+    "scopeTwoWay": "browserify directiveScope/scopeTwoWay/script.js > directiveScope/scopeTwoWay/bundle.js",
+    "popup": "browserify popup/script.js popup/helloDirec.js popup/modelCtrl.js > popup/bundle.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "angular": "^1.5.8",
-    "angular-mocks": "^1.5.8",
     "angular-route": "^1.5.8",
     "angular-ui-router": "^1.0.0-beta.3",
     "bootstrap": "^3.3.7",

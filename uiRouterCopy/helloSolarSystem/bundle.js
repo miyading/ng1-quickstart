@@ -40118,23 +40118,157 @@ module.exports = angular;
 
 },{"./angular":2}],4:[function(require,module,exports){
 var angular = require('angular');
+
+angular.module('helloSolarSystem')
+  .component('about', {
+    template: '<h3>Its the ui-router hello solar system!</h3>'
+    
+  });
+},{"angular":3}],5:[function(require,module,exports){
+var angular = require('angular');
+
+angular.module('helloSolarSystem')
+  .component('hello', {
+    template: '<h3>{{$ctrl.greeting}} solar system</h3>' +
+    '<button ng-click="$ctrl.toggleGreeting()">Toggle greeting</button>',
+    
+    controller: function() {
+      this.greeting = 'hello';
+      
+      this.toggleGreeting = function() {
+        this.greeting = (this.greeting == 'hello') ? 'whats up' : 'hello';
+      };
+    }
+    
+  });
+},{"angular":3}],6:[function(require,module,exports){
+var angular = require('angular');
+
+angular.module('helloSolarSystem')
+  .component('people', {
+    bindings: {
+      people: '<'
+    },
+    
+    template: '<h3>Some people: </h3>' +
+    '<ul>' +
+    '<li ng-repeat="person in $ctrl.people">' +
+    '<a ui-sref="person({personId: person.id})">' +
+    '{{person.name}}' +
+    '</a>' +
+    '</li>' +
+    '</ul>'
+    
+  });
+},{"angular":3}],7:[function(require,module,exports){
+var angular = require('angular');
+
+angular.module('helloSolarSystem')
+  .component('person', {
+    bindings: {
+      person: '<'
+    },
+    
+    template: '<h3>A person: </h3>' +
+    '<div>Name: {{$ctrl.person.name}}</div>' +
+    '<div>Id: {{$ctrl.person.id}}</div>' +
+    '<div>Company: {{$ctrl.person.company}}</div>' +
+    '<div>Email: {{$ctrl.person.email}}</div>' +
+    '<div>Address: {{$ctrl.person.address}}</div>' +
+    '<button ui-sref="people">Close</button>'
+    
+  });
+},{"angular":3}],8:[function(require,module,exports){
+module.exports=[
+  {
+    "id": "293",
+    "isActive": false,
+    "eyeColor": "brown",
+    "name": "Ingrid Townsend",
+    "company": "JASPER",
+    "email": "ingridtownsend@jasper.com",
+    "address": "690 Charles Place, Santel, Northern Mariana Islands, 3791"
+  },
+  {
+    "id": "581",
+    "isActive": true,
+    "eyeColor": "blue",
+    "name": "Estrada Nolan",
+    "company": "FIBRODYNE",
+    "email": "estradanolan@fibrodyne.com",
+    "address": "317 Seeley Street, Cade, Maryland, 3976"
+  }
+]
+},{}],9:[function(require,module,exports){
+var angular = require('angular');
 var ui = require('angular-ui-router');
 
-angular.module('myApp', ['ui.router'])
-  .config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
-    var helloState = {
-      name: 'hello',
-      url: '/hello',
-      template: '<h3>hello world!</h3>'
+angular.module('helloSolarSystem', ['ui.router'])
+  .config(function ($stateProvider) {
+    var state = [
+      {
+        name: 'hello',
+        url: '/hello',
+        component: 'hello'
+      },
+      {
+        name: 'about',
+        url: '/about',
+        component: 'about'
+      },
+      {
+        name: 'people',
+        url: '/people',
+        component: 'people',
+        resolve: {
+          people: function (PeopleService) {
+            console.log('PeopleService.getAllPeople() ', PeopleService.getAllPeople());
+            return PeopleService.getAllPeople();
+          }
+        }
+      },
+      {
+        name: 'person',
+        url: '/people/{personId}',
+        component: 'person',
+        resolve: {
+          person: function (PeopleService, $transition$) {
+            return PeopleService.getPerson($transition$.params().personId);
+          }
+        }
+      }
+    ];
+    
+    state.forEach(function (state) {
+      $stateProvider.state(state);
+    });
+  });
+},{"angular":3,"angular-ui-router":1}],10:[function(require,module,exports){
+var angular = require('angular');
+
+angular.module('helloSolarSystem')
+  .service('PeopleService', function ($http) {
+    var service = {
+      
+      getAllPeople: function () {
+        return $http.get('data/people.json', {cache: true})
+          .then(function (resp) {
+            console.log('resp ', resp);
+            return resp.data;
+          });
+      },
+      
+      getPerson: function(id) {
+        function personMatchesParam(person) {
+          return person.id === id;
+        }
+        
+        return service.getAllPeople().then(function(people) {
+          return people.find(personMatchesParam);
+        });
+      }
     };
     
-    var aboutState = {
-      name: 'about',
-      url: '/about',
-      template: '<h3>Its the ui-router hello world app!</h3>'
-    };
-    
-    $stateProvider.state(helloState);
-    $stateProvider.state(aboutState);
-  }]);
-},{"angular":3,"angular-ui-router":1}]},{},[4]);
+    return service;
+  });
+},{"angular":3}]},{},[9,4,5,6,7,10,8]);
