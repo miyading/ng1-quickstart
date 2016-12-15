@@ -31811,6 +31811,8 @@ angular.module('ui.bootstrap.demo').controller('ModalDemoCtrl', function ($uibMo
   $scope.items = ['item1111', 'item2111', 'item3111'];
   
   $scope.open = function (size) {
+    $('.modal').addClass('fade');
+    
     var modalInstance = $uibModal.open({
       animation: $scope.animationsEnabled,
       ariaLabelledBy: 'modal-title',
