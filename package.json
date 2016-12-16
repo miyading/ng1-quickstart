@@ -34,7 +34,8 @@
     "solarSystem": "browserify uiRouter/helloSolarSystem/script.js uiRouter/helloSolarSystem/*/*.js uiRouter/helloSolarSystem/*/*.json > uiRouter/helloSolarSystem/bundle.js",
     "ngInclude": "browserify ngInclude/script.js > ngInclude/bundle.js",
     "scopeTwoWay": "browserify directiveScope/scopeTwoWay/script.js > directiveScope/scopeTwoWay/bundle.js",
-    "popup": "browserify popup/script.js popup/helloDirec.js popup/modelCtrl.js > popup/bundle.js"
+    "popup": "browserify popup/script.js popup/helloDirec.js popup/modelCtrl.js > popup/bundle.js",
+    "ngIf": "browserify ngIf/script.js > ngIf/bundle.js"
   },
   "author": "",
   "license": "ISC",

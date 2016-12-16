@@ -1,0 +1,5 @@
+<span ng-repeat="hellos in hellosArray" style="background-color: greenyellow; width: 150px">
+  <span>{{hellos['keyLabel']}}:&nbsp;</span>
+  <span ng-if="typeof(hellos['valueLabel']) == 'string'">{{hellos['valueLabel']}}</span>
+  <span class="portal" ng-if="typeof(hellos['valueLabel']) == 'object'" ng-repeat="hello in keys(hellos['valueLabel'])">{{hellos['valueLabel'][hello]}}</span>
+</span>

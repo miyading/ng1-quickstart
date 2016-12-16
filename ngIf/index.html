@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ng-if</title>
+
+  <script src="bundle.js"></script>
+  <style>
+    .portal:after {
+      content: ' / '
+    }
+
+    .portal:last-child:after {
+      content: ''
+    }
+  </style>
+</head>
+<body ng-app="myApp">
+<div ng-controller="ExaCtrl">
+  <hello-world hellos-array="hellosArray"></hello-world>
+</div>
+</body>
+</html>
