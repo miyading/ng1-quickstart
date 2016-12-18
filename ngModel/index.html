@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ng model</title>
+
+  <script src="bundle.js"></script>
+</head>
+<body ng-app="myApp">
+<div ng-controller="ExamCtrl">
+
+    <input ng-repeat="config in configs" placeholder="{{config}}" ng-model="param[config]" type="text" />
+    <button ng-click="check()">check</button>
+  <h1>{{param}}</h1>
+</div>
+</body>
+</html>
