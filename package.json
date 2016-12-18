@@ -35,7 +35,8 @@
     "ngInclude": "browserify ngInclude/script.js > ngInclude/bundle.js",
     "scopeTwoWay": "browserify directiveScope/scopeTwoWay/script.js > directiveScope/scopeTwoWay/bundle.js",
     "popup": "browserify popup/script.js popup/helloDirec.js popup/modelCtrl.js > popup/bundle.js",
-    "ngIf": "browserify ngIf/script.js > ngIf/bundle.js"
+    "ngIf": "browserify ngIf/script.js > ngIf/bundle.js",
+    "linkScope": "browserify directiveLink/linkScope/script.js > directiveLink/linkScope/bundle.js"
   },
   "author": "",
   "license": "ISC",
