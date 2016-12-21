@@ -38,7 +38,8 @@
     "ngIf": "browserify ngIf/script.js > ngIf/bundle.js",
     "ngModel": "browserify ngModel/script.js > ngModel/bundle.js",
     "linkScope": "browserify directiveLink/linkScope/script.js > directiveLink/linkScope/bundle.js",
-    "filterPrac": "browserify filters/filterPrac/script.js > filters/filterPrac/bundle.js"
+    "filterPrac": "browserify filters/filterPrac/script.js > filters/filterPrac/bundle.js",
+    "maxlength": "browserify maxlength/script.js > maxlength/bundle.js"
   },
   "author": "",
   "license": "ISC",
