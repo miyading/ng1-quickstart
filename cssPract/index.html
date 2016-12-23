@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>css practise</title>
+  <script src="jquery-3.1.1.min.js"></script>
   <style>
     .container {
       color: red;
@@ -51,7 +52,7 @@
 
 <div class="container">
   <div class="left">
-    <p>All</p>
+    <p class="all">All</p>
 
     <div class="list-detail">
       <ul>
@@ -59,13 +60,14 @@
         <li>orange</li>
       </ul>
 
-      <img src="" width="100px" height="100px" title="img title" alt="img alt"/>
+      <img src="./2016-07-30%20131524.jpg" width="500px" height="800px" title="img title" alt="img alt"/>
 
       <div class="result">
         <span class="wrap">我想,我想,我想跨越天空,飞过无数阻碍,我想,我想,我想与你一起,我要残酷的忧伤,不要痛苦的悲伤!</span>
         <span class="nowrap">我想,我想,我想跨越天空,飞过无数阻碍,我想,我想,我想与你一起,我要残酷的忧伤,不要痛苦的悲伤!</span>
       </div>
 
+      <button class="special">Scroll</button>
     </div>
   </div>
 
@@ -81,9 +83,13 @@
     </div>
 
   </div>
-
-
 </div>
+
+<script type="text/javascript">
+  $('.special').click(function() {
+    $('body').animate({scrollTop: $('.all').offset().top}, 1000)
+  });
+</script>
 
 </body>
 </html>
