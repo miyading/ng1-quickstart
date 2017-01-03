@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>dropdown</title>
+
+  <script src="jquery-3.1.1.min.js"></script>
+</head>
+<body>
+<script type="text/javascript">
+  function OnDropDownChange(dropDown) {
+    var selectedValue = dropDown.a[dropDown.selectedIndex].value;
+    $("#txtSelectedCity").value = selectedValue;
+  }
+</script>
+
+<form action = "">
+  <ul name = "Cities" onChange="OnDropDownChange(this);">
+    <li value="roma"><a href="#">Roma</a></li>
+    <li value="torino"><a href="#">torino</a></li>
+    <li value="milan"><a href="#">milan</a></li>
+  </ul>
+  <br/>
+  <br/>
+  <input type="button" value="Test">
+  <input type="text" id="txtSelectedCity" name="SelectedCity" value="" />
+</form>
+</body>
+</html>
