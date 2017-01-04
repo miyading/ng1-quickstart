@@ -40,6 +40,7 @@
     "linkScope": "browserify directiveLink/linkScope/script.js > directiveLink/linkScope/bundle.js",
     "filterPrac": "browserify filters/filterPrac/script.js > filters/filterPrac/bundle.js",
     "maxlength": "browserify maxlength/script.js > maxlength/bundle.js",
+    "windowPrac": "browserify window/script.js > window/bundle.js",
     "linkScope": "browserify directiveLink/linkScope/script.js > directiveLink/linkScope/bundle.js"
   },
   "author": "",
